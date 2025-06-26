@@ -20,6 +20,9 @@ document.getElementById("abrirPresente").addEventListener("click", () => {
     mensagem.textContent = mensagemSorteada;
     mensagem.classList.remove("hidden");
 
+    const titulo = document.getElementById("titulo");
+    titulo.textContent = "Parabéns, feliz aniversário!!!!";
+
     // Música 🎵
     const musica = document.getElementById("musica");
     if (musica) musica.play();
