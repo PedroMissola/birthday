@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Uma mensagem para voce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="relative min-h-screen flex items-center justify-center overflow-hidden font-sans text-white">
+
+    <!-- Fundo animado -->
+    <div id="box" class="absolute inset-0 -z-10 bg-black/50"></div>
+
+    <main class="text-center px-4 z-10">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-8 text-neutral-50 drop-shadow-xl animate-pulse">
+            Hoje é o seu dia, Feliz Aniversário!! 🎉
+        </h1>
+
+        <button id="abrirPresente"
+            class="bg-sky-600 hover:bg-sky-500 text-white font-semibold text-lg px-6 py-3 rounded-full shadow-lg transition-all duration-300 mb-6 animate-bounce">
+            🎁 Abrir meu presente
+        </button>
+
+        <p id="mensagem"
+            class="hidden text-2xl md:text-3xl font-medium mt-6 drop-shadow-lg transition-opacity duration-700">
+            Parabéns! Que Deus continue te abençoando grandemente 🙏🎂
+        </p>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+    <audio id="musica" src="musica.mp3"></audio>
+
+    <!-- Script do background animado -->
+    <script src="BlurGradientBg.min.js"></script>
+    <script>
+        new Color4Bg.BlurGradientBg({
+            dom: "box",
+            colors: ["#00aaf1", "#77d7ff", "#00c0fd", "#0088ce"],
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
